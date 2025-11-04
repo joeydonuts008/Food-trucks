@@ -1,172 +1,222 @@
+
 :root {
-  --black: #000000;
+  --bg: #000;
   --bronze: #B87333;
   --bronze-dark: #8b4e22;
-  --accent: #8b4e22;
-  --muted: #222428;
-  --max-width: 1200px;
+  --gold: #D4AF37;
+  --muted: #222;
+  --container: 1100px;
 }
 
-html,body {
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
   height: 100%;
   margin: 0;
-  padding: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial
 }
 
 body {
-  background: var(--black);
-  color: var(--accent);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+  background: var(--bg);
+  color: var(--gold);
+  line-height: 1.6
 }
 
-
-.container,.container-fluid {
+.container,
+.container-fluid {
   width: 92%;
-  max-width: var(--max-width);
-  margin: 0 auto;
+  max-width: var(--container);
+  margin: 0 auto
 }
 
 
-h1,h2,h3,h4 {
-  color: var(--accent);
-  margin-top: 0.9rem;
-  margin-bottom: 0.9rem;
-  font-weight: 600;
+h1,
+h2,
+h3 {
+  color: var(--gold);
+  margin: .6rem 0;
+  font-weight: 600
 }
 
-h1.display-4 {
-  font-size: 2.6rem;
+h1 {
+  font-size: 2.8rem
 }
 
 p {
-  color: #8b4e22;
-  margin-bottom: 1rem;
-  line-height: 1.8;
+  color:#8b4e22;
+  margin: 0 0 1rem
 }
+
 
 a {
   color: var(--bronze);
-  text-decoration: none;
+  text-decoration: none
 }
 
 a:hover {
-  color: var(--accent);
   text-decoration: underline;
+  color: var(--gold)
 }
 
 
 .navbar {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.9));
-  border-bottom: 1px solid rgba(212, 175, 55, 0.06);
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, .03);
+  padding: .6rem 0
 }
 
 .navbar .navbar-brand {
   color: var(--bronze);
   font-weight: 700;
+  display: flex;
+  align-items: center
+}
+
+.navbar .navbar-brand img {
+  height: 26px;
+  margin-left: .5rem
 }
 
 .navbar .nav-link {
-  color:  #8b4e22;
-}
-
-.navbar .nav-link.active {
-  color: var(--bronze);
-  font-weight: 600;
-}
-
-.navbar-toggler {
-  border-color: rgba(212, 175, 55, 0.12);
+  color: #8b4e22
 }
 
 
 .hero {
-  background: linear-gradient(180deg, rgba(34, 34, 34, 0.6), rgba(0, 0, 0, 0.8));
-  color: var(--bronze);
-  padding: 4.5rem 0 3rem;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
   text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .6)), url('../img/black-food-truck-with-menu-displayed-side_14117-829069.jpg');
+  background-size: cover;
+  background-position: center
 }
 
 .hero h1 {
-  color: var(--accent);
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-size: 3.4rem;
+  margin-bottom: .6rem;
+  color: var(--gold)
 }
 
 .hero .lead {
-  color: #8b4e22;
   max-width: 900px;
-  margin: 0.8rem auto 1.2rem;
+  color: rgba(212, 175, 55, .95);
+  margin: 0 auto 1.2rem
 }
 
-.hero img {
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin: 1.6rem auto;
-  border-radius: 6px;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
-}
-
-
-.btn-primary,.hero .btn-light {
+.hero .btn {
   background: var(--bronze);
-  color: var(--black);
-  border: none;
-  padding: 0.6rem 1.1rem;
-  font-weight: 600;
+  color: #000;
   border-radius: 6px;
-  box-shadow: 0 6px 18px rgba(184, 115, 51, 0.15);
-}
-
-.btn-primary:hover {
-  background: var(--bronze-dark);
-  color: var(--accent);
-}
-
-
-.work,.intro {
-  background: transparent;
-}
-
-.work-item {
-  margin-bottom: 1.75rem;
-  padding: 0.8rem 0;
-}
-
-.work-item img {
-  width: 120px;
-  height: auto;
-  margin: 0 auto 0.9rem;
-  display: block;
+  padding: .6rem 1rem;
+  border: none
 }
 
 
 .row {
   width: 100%;
-  gap: 1.25rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem
 }
 
 .row>[class*="col"] {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: 0.75rem;
+  padding: .75rem
 }
+
+.work-item {
+  padding: 1rem 0
+}
+
+.work-item img {
+  width: 110px;
+  margin: 0 auto 1rem;
+  display: block
+}
+
 
 footer {
   background: #070707;
-  color: rgba(212, 175, 55, 0.9);
+  color: rgba(212, 175, 55, .95);
   padding: 1.25rem 0;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, .03)
 }
 
+
 img {
- max-width: 500px;
- max-height: 500000px;
+  max-width: 100%;
+  height: auto;
+  display: block
+}
+
+.img-capped {
+  max-width: 500px
+}
+
+
+.img-overlay {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3; 
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.img-overlay img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.img-overlay .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .25s;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 6px
+}
+
+.img-overlay .overlay-text {
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--gold);
+  padding: .4rem .7rem;
+  border-radius: 4px;
+  font-weight: 600
+}
+
+.img-overlay:hover .overlay {
+  opacity: 1
+}
+
+
+/* Center section headings inside containers (e.g. About Us) */
+.container-fluid h2,
+.container h2 {
+  text-align: center;
+}
+
+
+@media (min-width:992px) {
+  .container {
+    width: 88%
+  }
+
+  .hero {
+    min-height: 92vh
+  }
+
+  h1 {
+    font-size: 3.6rem
+  }
 }
